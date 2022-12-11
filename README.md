@@ -1,8 +1,14 @@
 # Index
-- placeholder
-- placeholder
-- placeholder
-- placeholder
+- [Introdução](#introdução)
+- [Tipos de Dados](#tipos-de-dados)
+- [Manipulação de dados](#manipulação-de-dados)
+- [Operadores](#operadores)
+- [Relações](#relações)
+- [Gerenciamento de Dados](#gerenciamento-de-dados)
+- [Comandos](#comandos)
+- [Métodos](#métodos)
+- [Funções](#funções-de-agregação)
+- [Relacionamentos entre tabelas](#relacionamentos)
 
 # Introdução
 SQL é uma linguagem quase que universal entre os bancos de dados, a ideia do banco de dados relacional surgiu em 1970 pelo Edgar Codd, onde ele sugeriu esse modelo a partir da teoria matemática das relações entre conjuntos. Se baseando em relações de álgebra para manipulação de dados.
@@ -18,6 +24,8 @@ Definição de dados > Manipulação de dados > Controle e transição de dados 
 Cada tipo de comando é responsável por alguma categoria de manipulação, desde definição, configuração, até requisições e visualizações.
 
 <img src="./assets/SQLcommtypes.jpg" alt="Exemplo de imagem" width="95%" height="600px">
+
+[VOLTAR AO TOPO](#index)
 
 ## Tipos de dados
 
@@ -39,6 +47,8 @@ Cada tipo de comando é responsável por alguma categoria de manipulação, desd
 - time : apenas o tempo com milisegundos hh:mm:ssssssss
 - datetime2 : também registra os milisegundos aaaa\mm\dd:hh:mm:ssssssss
 - smalldatetime : recebe data e hora, mas apenas entre 1900\01\01:00:00:00 e 23\59\59.9999999
+
+[VOLTAR AO TOPO](#index)
 
 ### Manipulação de dados
 ```sql
@@ -67,6 +77,7 @@ FROM Clientes
 SELECT REPLACE(cpf, '.', '-')
 FROM Clientes
 ```
+[VOLTAR AO TOPO](#index)
 
 ## Operadores
 | Operador | Descrição |
@@ -143,6 +154,8 @@ CREATE TABLE video (
 )
 ```
 
+[VOLTAR AO TOPO](#index)
+
 ### Gerenciamento de dados
 Após a definição do esquema de dados, é preciso fazer a sua manipulação. Porém é importante levantar dois pontos sobre o comportamento do SQL Server. Primeiro que SQL é uma **linguagem bloqueante**, ao passar comandos e alguma coisa não for compatível com aquilo que o sistema espera, todo o comando não será executado.
 
@@ -207,6 +220,8 @@ CREATE TABLE CNH (
 	idade CHECK (idade >= 18)
 )
 ```
+
+[VOLTAR AO TOPO](#index)
 
 ## Comandos
 AS - ou Álias - Não é um comando, mas serve para dar nome a cada parâmetro passada e retornar como um apelido para os campos de dados na tabela.
@@ -319,6 +334,8 @@ SELECT SQRT(total)
 FROM Vendas
 ```
 
+[VOLTAR AO TOPO](#index)
+
 ## Funções de agregação
 ### GROUP BY
 Recebe uma função de agregação que aplica estas funções baseado em um campo especifico. Exemplo, somar o preço de custo de produtos, através dos departamentos individuais
@@ -377,7 +394,9 @@ FROM sales.orderdetails
 GROUP BY DATEPART(MONTH, orderdate)
 ```
 
-## JOINS - Relacionamento de dados
+[VOLTAR AO TOPO](#index)
+
+## Relacionamentos
 Ao fazer um JOIN entre duas tabelas, nós agora temos três relações de dados para relacionar. A primeira tabela selecionada é considerada a esquerda, a segunda tabela é considerada a direita e os dados semelhantes entre as duas são o central - inner.
 
 <img src="./assets/slqjoins.jpg" alt="Exemplo de imagem" width="95%" height="600px">
@@ -444,3 +463,5 @@ SELECT CA.Name, CA.Region, CB.Name, CB.Region
 FROM Costumers CA, Costumers CB
 WHERE CA.Region = CB.Region
 ```
+
+[VOLTAR AO TOPO](#index)
