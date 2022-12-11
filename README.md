@@ -17,8 +17,7 @@ Definição de dados > Manipulação de dados > Controle e transição de dados 
 
 Cada tipo de comando é responsável por alguma categoria de manipulação, desde definição, configuração, até requisições e visualizações.
 
-[](SQLcommtypes.jpg)
-![Exemplos de uso](https://github.com/NickolasEdu/SQL-Server_Docs/assets/SQLcommtypes.jpg)
+<img src="./assets/SQLcommtypes.jpg" alt="Exemplo de imagem" width="95%" height="600px">
 
 ## Tipos de dados
 
@@ -89,7 +88,7 @@ PRIMARY KEY e FOREIGN KEY
 
 Cada tabela em SQL é uma relação, é no desenvolvimento do esquema de banco que deve ser feita a definição da modelagem que vai definir como será os relacionamentos destas tabelas. Modelagem de banco consiste em separar informações relevantes e evitar repetições, para caso de dados que dependem um do outro é feito o uso das Keys. As chaves primárias e chaves forasteiras - Primary Key e Foreign Key - são o caminho por onde será feito a comunicação entre relações. Exemplo, numa relação de funcionários cada funcionário teu seu ID próprio, que é a Primary Key e no campo de ‘depertamentos’ não há nenhum nome, apenas o ID de departamento, que nesse caso é a Foreign Key. Pois para acessar a informação desse departamento na relação departamentos, o ID dele lá será único, enquanto que na tabela de ‘funcionários’, o ID dos departamentos será uma chave que é estrangeiro pode não ser único.
 
-[pk and fk img]()
+<img src="./assets/pkfk.jpeg" alt="Exemplo de imagem" width="95%" height="600px">>
 
 CONFIGURAÇÃO DE ESQUEMA
 
@@ -381,7 +380,7 @@ GROUP BY DATEPART(MONTH, orderdate)
 ## JOINS - Relacionamento de dados
 Ao fazer um JOIN entre duas tabelas, nós agora temos três relações de dados para relacionar. A primeira tabela selecionada é considerada a esquerda, a segunda tabela é considerada a direita e os dados semelhantes entre as duas são o central - inner.
 
-[JOINS EXAMPLE IMG]()
+<img src="./assets/slqjoins.jpg" alt="Exemplo de imagem" width="95%" height="600px">
 
 ### Apelidos
 Após a indicação de uma tabela, é possível atribuir um apelido a ela para ser usada posteriormente
