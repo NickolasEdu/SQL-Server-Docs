@@ -296,6 +296,8 @@ FROM Person
 WHERE firstname LIKE 'Rob%'
 ```
 
+[VOLTAR AO TOPO](#index)
+
 ## Métodos
 ### COUNT
 Faz a contagem do número de persistências em campos da tabela, exemplo o número de linhas na coluna ‘title’ ou o número único de títulos na mesma coluna
