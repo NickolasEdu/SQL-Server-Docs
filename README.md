@@ -17,7 +17,7 @@ Definição de dados > Manipulação de dados > Controle e transição de dados 
 
 Cada tipo de comando é responsável por alguma categoria de manipulação, desde definição, configuração, até requisições e visualizações.
 
-[SQL types img]()
+![](SQLcommtypes.jpg)
 
 ## Tipos de dados
 
